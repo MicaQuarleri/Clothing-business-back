@@ -18,7 +18,9 @@ app.use("/api", router);
 
 app.use(express.static(path.join(__dirname, "public")));
 
-const PORT = process.env.PORT;
+const host = process.env.PORT || "0.0.0.0";
+const port = process.env.PORT || 3002;
 
-app.listen(PORT);
-console.log(`Server running on port ${PORT}`);
+app.listen(port, host, () => {
+  console.log(`Server running on port ${port}`);
+});
