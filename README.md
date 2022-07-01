@@ -1,0 +1,1 @@
+This portfolio contains the backend code of the clothing business project
